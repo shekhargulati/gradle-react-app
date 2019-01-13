@@ -19,5 +19,10 @@ task test(type: NpmTask) {
     args = ['run', 'test']
 }
 
+task run(type: NpmTask) {
+    args = ['start']
+}
+
+
 check.dependsOn(test)
 assemble.dependsOn(bundle)
